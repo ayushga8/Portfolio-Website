@@ -22,7 +22,7 @@
   <meta name="description"
     content="Ayush Garg | Portfolio, Visit and know about me & my projects/designs. I value simple content structure, clean design patterns, and thoughtful interactions." />
   <meta name="keywords"
-    content="Ayush Garg,Ayush Garg portfolio,Ayush Garg Portfolio,AyushAgrawal,Ayushagrawal site,Ayush Garg Site,Ayush Garg me,Ayush Garg web,Ayush Garg github,Ayush Garg site,Ayush Garg frontend developer,frontend developer,Ayush Garg jaipur,Ayush jaipur" />
+    content="Ayush Garg,Ayush Garg portfolio,Ayush Garg Portfolio,AyushGarg,AyushGarg site,Ayush Garg Site,Ayush Garg me,Ayush Garg web,Ayush Garg github,Ayush Garg site,Ayush Garg frontend developer,frontend developer,Ayush Garg jaipur,Ayush jaipur" />
   <meta name="author" content="Ayush Garg" />
   <meta property="og:title" content="Ayush Garg | Portfolio" />
   <meta property="og:description"
@@ -47,16 +47,19 @@
       opacity: 0.9;
       pointer-events: none;
     }
+
     #threejs-container canvas {
       display: block;
     }
+
     /* fade-in-up scroll reveal */
     .fade-in-up {
       opacity: 0;
       transform: translateY(20px);
       transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-                  transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     }
+
     .fade-in-up.visible {
       opacity: 1;
       transform: translateY(0);
@@ -80,7 +83,7 @@
 
     <div class="navbar" id="navbar">
       <div class="hey">Hey!</div>
-      <div class="logo" tabindex="0" aria-label="vinod jangid logo">
+      <div class="logo" tabindex="0" aria-label="Ayush Garg logo">
         <div class="logo-top">
           <img src="src/png/nav-avatar.png" alt="animation-head" id="nav-avatar" />
         </div>
@@ -229,7 +232,7 @@
           thoughtful interactions.
         </p>
         <div class="contact-btn-div fade-in-up" data-aos="fade-up" data-aos-delay="800">
-          <a href="mailto:ayushagrawal0426@gmail.com" tabindex="-1">
+          <a href="mailto:ayush82099@gmail.com" tabindex="-1">
             <button class="letsTalkBtn">
               <p class="letsTalkBtn-text">Let's Talk!</p>
               <span class="letsTalkBtn-BG"></span>
@@ -557,7 +560,7 @@
 
   <!-- Three.js 3D Sphere for Hero Background -->
   <script>
-    (function() {
+    (function () {
       const container = document.getElementById('threejs-container');
       if (!container) return;
 
@@ -651,9 +654,9 @@
             b = Math.max(65, Math.min(215, b));
 
             // Slight warm tint — real moon is warm gray
-            px[idx]     = Math.min(255, b + 3);   // R
+            px[idx] = Math.min(255, b + 3);   // R
             px[idx + 1] = Math.min(255, b);        // G
-            px[idx + 2] = Math.max(0,   b - 6);    // B
+            px[idx + 2] = Math.max(0, b - 6);    // B
             px[idx + 3] = 255;                      // A
           }
         }
@@ -690,7 +693,7 @@
 
       // Mouse parallax
       let mouseX = 0, mouseY = 0;
-      window.addEventListener('mousemove', function(e) {
+      window.addEventListener('mousemove', function (e) {
         mouseX = (e.clientX / window.innerWidth) - 0.5;
         mouseY = (e.clientY / window.innerHeight) - 0.5;
       });
@@ -716,7 +719,7 @@
       animate(0);
 
       // Responsive resize
-      window.addEventListener('resize', function() {
+      window.addEventListener('resize', function () {
         const w = container.clientWidth || window.innerWidth;
         const h = container.clientHeight || window.innerHeight;
         camera.aspect = w / h;
@@ -726,16 +729,16 @@
     })();
 
     // fade-in-up IntersectionObserver
-    (function() {
-      const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
+    (function () {
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
           }
         });
       }, { threshold: 0.1 });
 
-      document.querySelectorAll('.fade-in-up').forEach(function(el) {
+      document.querySelectorAll('.fade-in-up').forEach(function (el) {
         observer.observe(el);
       });
     })();
